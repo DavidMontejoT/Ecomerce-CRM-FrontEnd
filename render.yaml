@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: esmeraldas-frontend
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: dist
+    region: oregon
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        value: https://esmeraldas-backend.onrender.com
