@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import type { Product } from '../services/api';
 import Hero from '../components/Hero/Hero';

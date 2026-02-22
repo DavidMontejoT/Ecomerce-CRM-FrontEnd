@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Hero: React.FC = () => {
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);

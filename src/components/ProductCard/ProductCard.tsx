@@ -1,4 +1,3 @@
-import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import type { Product } from '../../services/api';
 

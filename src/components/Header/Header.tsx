@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Search, ShoppingCart } from 'lucide-react';
 
 const Header: React.FC = () => {
