@@ -126,6 +126,52 @@ const api = axios.create({
 
 ## 🎨 Sistema de Animaciones
 
+## 💬 Integración con WhatsApp
+
+El frontend se integra con el backend que permite gestionar productos completamente a través de WhatsApp Cloud API.
+
+### Comandos de WhatsApp Disponibles
+
+#### Gestión de Productos
+- **`subir producto`** - Agregar un nuevo producto al catálogo
+  - Solicita: Nombre, Descripción, Precio, Categoría, WhatsApp, Imagen
+  - El producto aparece automáticamente en el frontend
+
+- **`editar producto`** - Modificar productos existentes
+  - Selecciona por ID
+  - Permite editar: Nombre, Descripción, Precio, Categoría, WhatsApp, Imagen
+
+- **`borrar producto`** - Eliminar productos del catálogo
+  - Selecciona por ID
+  - Solicita confirmación antes de eliminar
+
+- **`ver productos`** - Listar todos los productos con detalles
+
+### Flujo de Actualización
+
+```
+WhatsApp → Backend → Base de Datos → Frontend
+   ↓            ↓            ↓             ↓
+Usuario    Webhook    PostgreSQL    React App
+envía      recibe     guarda actualiza
+mensaje    mensaje    datos    en tiempo real
+```
+
+### Ventajas de la Integración
+
+✅ **Gestión sin código**: Admin productos desde WhatsApp
+✅ **Actualización en tiempo real**: Cambios reflejan inmediatamente
+✅ **Imágenes automáticas**: Descarga y almacenamiento automático
+✅ **Conversación natural**: Interface intuitiva tipo chat
+✅ **Acceso móvil**: Gestiona desde cualquier lugar
+
+### Notas Importantes
+
+- Los cambios realizados por WhatsApp **actualizan automáticamente** el frontend
+- No es necesario redeployar el frontend para ver cambios
+- Las imágenes se almacenan en el backend y se sirven vía API
+- El frontend consume la API `/api/products` que siempre retorna datos actualizados
+
 ### Animaciones CSS Personalizadas
 
 Definidas en `src/index.css`:
