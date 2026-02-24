@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import type { Product } from '../services/api';
 import Hero from '../components/Hero/Hero';
 import ProductCard from '../components/ProductCard/ProductCard';
+import AboutUs from '../components/AboutUs/AboutUs';
 import { productApi } from '../services/api';
 
 const HomePage: React.FC = () => {
@@ -185,6 +186,9 @@ const HomePage: React.FC = () => {
           )}
         </div>
       </div>
+
+      {/* About Us Section */}
+      <AboutUs />
     </div>
   );
 };
